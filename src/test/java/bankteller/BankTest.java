@@ -39,5 +39,14 @@ public class BankTest {
 		assertEquals(200.0, result.getAccountBalance(), 0.001);
 		
 	}
+	@Test
+	public void shouldDeposit40IntoBank3() {
+	Bank underTest = new Bank();
+	underTest.addBankAccount(new BankAccount("1", "Checking", 100.0));
+	underTest.addBankAccount(new BankAccount("2", "Checking", 200.0));
+	underTest.addBankAccount(new BankAccount("3", "Checking", 300.0));
+	underTest.getBankAccount("3").deposit(40.00);
+	assertEquals(340.0, underTest.getBankAccount("3").getAccountBalance(), 0.001);
+	}
 	
 }
