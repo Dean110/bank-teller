@@ -7,8 +7,25 @@ public class Bank {
 
 	Map<String, BankAccount> bankAccounts = new HashMap<String, BankAccount>();
 
-	public String addBankAccount(BankAccount bankAccount) {
-		return this.bankAccounts.put(bankAccount.getAccountNumber(), bankAccount).toString();
+	public void addBankAccount(BankAccount bankAccount) {
+		this.bankAccounts.put(bankAccount.getAccountNumber(), bankAccount);
 	}
 
+	public int amountOfAccounts() {
+		
+		return this.bankAccounts.size();
+	}
+
+	public void closeBankAccount(String accountNum) {
+		
+		bankAccounts.remove(accountNum);
+		
+	}
+
+	public BankAccount getBankAccount(String accountNum) {
+		
+		return this.bankAccounts.get(accountNum);
+	}
+
+	
 }
