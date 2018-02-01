@@ -34,4 +34,14 @@ public class Bank {
 		}
 
 	}
+
+	@Override
+	public String toString() {
+		String toStringReturn = "";
+		for (Entry<String, BankAccount> account : bankAccounts.entrySet()) {
+			toStringReturn += "("+account.getValue().getAccountNumber()+")" + "\t" + account.getValue().getType() + "\t"
+					+ account.getValue().getAccountBalance() + "\n";
+		}
+		return toStringReturn;
+	}
 }
