@@ -10,6 +10,7 @@ public class BankTellerApp {
 		BankAccount account2 = new BankAccount("2222", "Savings ", 2500.00);
 		myBank.addBankAccount(account1);
 		myBank.addBankAccount(account2);
+		myBank.addBankAccount(new BankAccount("3333", "C.D.   ", 10000));
 		int userChoice;
 
 		while (true) {
@@ -51,7 +52,7 @@ public class BankTellerApp {
 
 				}
 			}
-			input.close();
+			
 		}
 	}
 
